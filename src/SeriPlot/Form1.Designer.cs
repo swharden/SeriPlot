@@ -144,6 +144,8 @@
             // AutoAxisCheckbox
             // 
             this.AutoAxisCheckbox.AutoSize = true;
+            this.AutoAxisCheckbox.Checked = true;
+            this.AutoAxisCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AutoAxisCheckbox.Location = new System.Drawing.Point(6, 51);
             this.AutoAxisCheckbox.Name = "AutoAxisCheckbox";
             this.AutoAxisCheckbox.Size = new System.Drawing.Size(79, 19);

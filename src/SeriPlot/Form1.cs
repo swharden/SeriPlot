@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +17,20 @@ namespace SeriPlot
     {
         private SerialDataLogger Logger;
 
+        private ScottPlot.PlottableScatter[] ScatterPlots;
+
         public Form1()
         {
             InitializeComponent();
+            DataTextbox.Text = "not connected";
+
+            ScatterPlots = new ScottPlot.PlottableScatter[10];
+            double[] init = { 0 };
+            for (int i = 0; i < 10; i++)
+                ScatterPlots[i] = formsPlot1.plt.PlotScatter(init, init, markerSize: 0);
+            formsPlot1.plt.Ticks(dateTimeX: true);
+            formsPlot1.plt.YLabel("ADC Reading (V)");
+
             ScanSerialPorts();
         }
 
@@ -58,9 +70,15 @@ namespace SeriPlot
             if (Logger is null || Logger.DataPointCount == 0)
                 return;
 
-            formsPlot1.plt.Clear();
-            double[] ys = Logger.GetValues(0);
-            formsPlot1.plt.PlotSignal(ys);
+            for (int i = 0; i < 10; i++)
+            {
+                ScatterPlots[i].xs = Logger.GetOADates();
+                ScatterPlots[i].ys = Logger.GetValues(i);
+            }
+
+            if (AutoAxisCheckbox.Checked)
+                formsPlot1.plt.AxisAuto();
+
             formsPlot1.Render();
 
             DataTextbox.Text = Logger.GetLatestValues();

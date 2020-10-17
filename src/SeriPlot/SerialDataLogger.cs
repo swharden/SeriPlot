@@ -88,7 +88,7 @@ namespace SeriPlot
 
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < ChannelCount; i++)
-                sb.AppendLine($"Ch{i}: {Data[i].Last()} V");
+                sb.AppendLine($"Ch{i}: {Data[i].Last():0.000} V");
             return sb.ToString();
         }
     }
