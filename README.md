@@ -2,6 +2,8 @@
 
 **SeriPlot plots serial port data in real time.** SeriPlot is designed to be easy to modify to support custom data formats. SeriPlot is MIT licensed so it can be adapted for commercial applications, and it is easy to distribute as a click-to-run Windows application. 
 
+![](dev/images/seriplot.gif)
+
 > **⚠️ Warning:** SeriPlot is early in development, and currently is only capable of plotting data from ADC10 USB modules. See the [ADC-10-F103C project](https://github.com/swharden/ADC-10-F103C) for details.
 
 ## Serial Port Data Plotting Software
