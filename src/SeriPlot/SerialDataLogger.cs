@@ -22,6 +22,7 @@ namespace SeriPlot
         public double[] GetValues(int channelIndex = 0) => Data[channelIndex].ToArray();
 
         public double[] GetOADates() => Timestamps.Select(x => x.ToOADate()).ToArray();
+        public DateTime LastUpdate => Timestamps.Last();
 
         public SerialDataLogger(string port, int channelCount, int sampleRate = 115200, string lineEnding = "\r\n\r\n")
         {
@@ -79,17 +80,9 @@ namespace SeriPlot
         {
             for (int i = 0; i < ChannelCount; i++)
                 Data[i].Clear();
+            Timestamps.Clear();
         }
 
-        public string GetLatestValues()
-        {
-            if (DataPointCount == 0)
-                return "no data";
-
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < ChannelCount; i++)
-                sb.AppendLine($"Ch{i}: {Data[i].Last():0.000} V");
-            return sb.ToString();
-        }
+        public double GetLatestValue(int channel = 0) => (DataPointCount == 0) ? double.NaN : Data[channel].Last();
     }
 }

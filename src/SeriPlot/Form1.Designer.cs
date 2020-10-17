@@ -40,7 +40,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.AutoAxisCheckbox = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.DataTextbox = new System.Windows.Forms.RichTextBox();
+            this.adcControl1 = new SeriPlot.AdcControl();
+            this.adcControl2 = new SeriPlot.AdcControl();
+            this.adcControl3 = new SeriPlot.AdcControl();
+            this.adcControl4 = new SeriPlot.AdcControl();
+            this.adcControl5 = new SeriPlot.AdcControl();
+            this.adcControl6 = new SeriPlot.AdcControl();
+            this.adcControl7 = new SeriPlot.AdcControl();
+            this.adcControl8 = new SeriPlot.AdcControl();
+            this.adcControl9 = new SeriPlot.AdcControl();
+            this.adcControl10 = new SeriPlot.AdcControl();
             this.groupBox1.SuspendLayout();
             this.label3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,7 +113,7 @@
             this.formsPlot1.Location = new System.Drawing.Point(173, 12);
             this.formsPlot1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(614, 474);
+            this.formsPlot1.Size = new System.Drawing.Size(717, 521);
             this.formsPlot1.TabIndex = 2;
             // 
             // label3
@@ -134,7 +143,7 @@
             // 
             this.groupBox2.Controls.Add(this.AutoAxisCheckbox);
             this.groupBox2.Controls.Add(this.ClearButton);
-            this.groupBox2.Location = new System.Drawing.Point(13, 351);
+            this.groupBox2.Location = new System.Drawing.Point(12, 449);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(153, 81);
             this.groupBox2.TabIndex = 1;
@@ -159,24 +168,101 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // DataTextbox
+            // adcControl1
             // 
-            this.DataTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.DataTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataTextbox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DataTextbox.Location = new System.Drawing.Point(13, 99);
-            this.DataTextbox.Name = "DataTextbox";
-            this.DataTextbox.Size = new System.Drawing.Size(153, 246);
-            this.DataTextbox.TabIndex = 4;
-            this.DataTextbox.Text = "Ch0: 1.234 V\nCh1: 1.234 V\nCh2: 1.234 V\nCh3: 1.234 V\nCh4: 1.234 V\nCh5: 1.234 V\nCh6" +
-    ": 1.234 V\nCh7: 1.234 V\nCh8: 1.234 V\nCh9: 1.234 V";
+            this.adcControl1.IsVisible = false;
+            this.adcControl1.Location = new System.Drawing.Point(12, 99);
+            this.adcControl1.Name = "adcControl1";
+            this.adcControl1.Size = new System.Drawing.Size(142, 29);
+            this.adcControl1.TabIndex = 3;
+            // 
+            // adcControl2
+            // 
+            this.adcControl2.IsVisible = false;
+            this.adcControl2.Location = new System.Drawing.Point(12, 134);
+            this.adcControl2.Name = "adcControl2";
+            this.adcControl2.Size = new System.Drawing.Size(142, 29);
+            this.adcControl2.TabIndex = 3;
+            // 
+            // adcControl3
+            // 
+            this.adcControl3.IsVisible = false;
+            this.adcControl3.Location = new System.Drawing.Point(12, 169);
+            this.adcControl3.Name = "adcControl3";
+            this.adcControl3.Size = new System.Drawing.Size(142, 29);
+            this.adcControl3.TabIndex = 3;
+            // 
+            // adcControl4
+            // 
+            this.adcControl4.IsVisible = false;
+            this.adcControl4.Location = new System.Drawing.Point(12, 204);
+            this.adcControl4.Name = "adcControl4";
+            this.adcControl4.Size = new System.Drawing.Size(142, 29);
+            this.adcControl4.TabIndex = 3;
+            // 
+            // adcControl5
+            // 
+            this.adcControl5.IsVisible = false;
+            this.adcControl5.Location = new System.Drawing.Point(13, 239);
+            this.adcControl5.Name = "adcControl5";
+            this.adcControl5.Size = new System.Drawing.Size(142, 29);
+            this.adcControl5.TabIndex = 3;
+            // 
+            // adcControl6
+            // 
+            this.adcControl6.IsVisible = false;
+            this.adcControl6.Location = new System.Drawing.Point(12, 274);
+            this.adcControl6.Name = "adcControl6";
+            this.adcControl6.Size = new System.Drawing.Size(142, 29);
+            this.adcControl6.TabIndex = 3;
+            // 
+            // adcControl7
+            // 
+            this.adcControl7.IsVisible = false;
+            this.adcControl7.Location = new System.Drawing.Point(12, 309);
+            this.adcControl7.Name = "adcControl7";
+            this.adcControl7.Size = new System.Drawing.Size(142, 29);
+            this.adcControl7.TabIndex = 3;
+            // 
+            // adcControl8
+            // 
+            this.adcControl8.IsVisible = false;
+            this.adcControl8.Location = new System.Drawing.Point(12, 344);
+            this.adcControl8.Name = "adcControl8";
+            this.adcControl8.Size = new System.Drawing.Size(142, 29);
+            this.adcControl8.TabIndex = 3;
+            // 
+            // adcControl9
+            // 
+            this.adcControl9.IsVisible = false;
+            this.adcControl9.Location = new System.Drawing.Point(12, 379);
+            this.adcControl9.Name = "adcControl9";
+            this.adcControl9.Size = new System.Drawing.Size(142, 29);
+            this.adcControl9.TabIndex = 3;
+            // 
+            // adcControl10
+            // 
+            this.adcControl10.IsVisible = false;
+            this.adcControl10.Location = new System.Drawing.Point(12, 414);
+            this.adcControl10.Name = "adcControl10";
+            this.adcControl10.Size = new System.Drawing.Size(142, 29);
+            this.adcControl10.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 498);
-            this.Controls.Add(this.DataTextbox);
+            this.ClientSize = new System.Drawing.Size(903, 545);
+            this.Controls.Add(this.adcControl10);
+            this.Controls.Add(this.adcControl9);
+            this.Controls.Add(this.adcControl8);
+            this.Controls.Add(this.adcControl7);
+            this.Controls.Add(this.adcControl6);
+            this.Controls.Add(this.adcControl5);
+            this.Controls.Add(this.adcControl4);
+            this.Controls.Add(this.adcControl3);
+            this.Controls.Add(this.adcControl2);
+            this.Controls.Add(this.adcControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.formsPlot1);
             this.Controls.Add(this.groupBox1);
@@ -203,7 +289,16 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox AutoAxisCheckbox;
-        private System.Windows.Forms.RichTextBox DataTextbox;
+        private AdcControl adcControl1;
+        private AdcControl adcControl2;
+        private AdcControl adcControl3;
+        private AdcControl adcControl4;
+        private AdcControl adcControl5;
+        private AdcControl adcControl6;
+        private AdcControl adcControl7;
+        private AdcControl adcControl8;
+        private AdcControl adcControl9;
+        private AdcControl adcControl10;
     }
 }
 
