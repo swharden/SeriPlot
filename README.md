@@ -11,6 +11,7 @@
 ### Free
 
 * [SerialPlot](https://hg.sr.ht/~hyozd/serialplot/) - C++ and Qt
+* [YAT (Yet Another Terminal)](https://sourceforge.net/projects/y-a-terminal/) - .NET, plotting supported (currently beta)
 * [SerialLab](https://github.com/ahsayde/Serial-Lab) - C#, looks good, fixed format
 * [ArduinoPlot](https://github.com/gregpinero/ArduinoPlot) - Python + Matplotlib
 * [Arduino Plotter](https://github.com/devinaconley/arduino-plotter) - Arduino library
