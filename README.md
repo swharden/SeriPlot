@@ -1,5 +1,7 @@
 # SeriPlot
 
+[![CI](https://github.com/swharden/SeriPlot/actions/workflows/ci.yaml/badge.svg)](https://github.com/swharden/SeriPlot/actions/workflows/ci.yaml)
+
 **SeriPlot plots serial port data in real time.** SeriPlot is designed to be easy to modify to support custom data formats. SeriPlot is MIT licensed so it can be adapted for commercial applications, and it is easy to distribute as a click-to-run Windows application. 
 
 ![](dev/images/seriplot.gif)
