@@ -46,7 +46,7 @@ namespace SeriPlot
         // TODO: allow this to be injected somehow
         private void ProcessNewData(string newData)
         {
-            string[] lines = newData.Split("\n")
+            string[] lines = newData.Split('\n')
                                     .Select(x => x.Trim())
                                     .Where(x => x.StartsWith("CH"))
                                     .ToArray();
@@ -57,8 +57,8 @@ namespace SeriPlot
                 return;
             }
 
-            double[] values = lines.Select(x => x.Split("\t")[0])
-                                   .Select(x => x.Split(":")[1])
+            double[] values = lines.Select(x => x.Split('\t')[0])
+                                   .Select(x => x.Split(':')[1])
                                    .Select(x => Math.Round(double.Parse(x) * 3.3 / 4096, 3))
                                    .ToArray();
 
