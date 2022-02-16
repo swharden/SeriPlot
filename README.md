@@ -2,15 +2,21 @@
 
 [![CI](https://github.com/swharden/SeriPlot/actions/workflows/ci.yaml/badge.svg)](https://github.com/swharden/SeriPlot/actions/workflows/ci.yaml)
 
-**SeriPlot plots serial port data in real time.** SeriPlot is designed to be easy to modify to support custom data formats. SeriPlot is MIT licensed so it can be adapted for commercial applications, and it is easy to distribute as a click-to-run Windows application. 
+**SeriPlot is a Windows application that plots serial port data in real time.** SeriPlot is designed to be easy to modify to support custom data formats. SeriPlot is MIT licensed so it can be adapted for commercial applications, and it is easy to distribute as a click-to-run Windows application. 
 
 ![](dev/images/seriplot.gif)
 
+## Download
+
+**Download:** SeriPlot can be downloaded from the [**Releases page**](https://github.com/swharden/SeriPlot/releases).
+
 > **⚠️ Warning:** SeriPlot is early in development, and currently is only capable of plotting data from ADC10 USB modules. See the [ADC-10-F103C project](https://github.com/swharden/ADC-10-F103C) for details.
 
-## Serial Port Data Plotting Software
+## Resources
 
-### Free
+This list documents the various software options I was able to find for plotting data from serial port sensor modules in real time:
+
+#### Free Software
 
 * [SerialPlot](https://hg.sr.ht/~hyozd/serialplot/) - C++ and Qt
 * [YAT (Yet Another Terminal)](https://sourceforge.net/projects/y-a-terminal/) - .NET, plotting supported (currently beta)
@@ -25,11 +31,11 @@
 * [Serial Monitor](https://github.com/hirohashi/SerialMonitor) - C++ source code only
 * [RealTerm](https://sourceforge.net/projects/realterm/) - log a CSV while plotting it with another program
 
-### Commercial
+#### Commercial Software
 * [MegunoLink](http://www.megunolink.com/) $29.95
 * [MakerPlot](http://www.makerplot.com/) $39
 
-### Common Downsides
+#### Common Downsides
 * Data format is often inflexible
 * Arduino-specific JavaScript + Processing software
 * Python GUI applications require complicated and brittle environments
