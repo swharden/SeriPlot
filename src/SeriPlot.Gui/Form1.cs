@@ -1,6 +1,5 @@
 using ScottPlot.Plottable;
 using System.IO.Ports;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SeriPlot.Gui;
 
@@ -70,7 +69,7 @@ public partial class Form1 : Form
         SerialPort sp = (SerialPort)sender;
         string lastLine = sp.ReadLine().Trim();
         LastLine = lastLine;
-        string[] parts = lastLine.Split(",");
+        string[] parts = lastLine.Split(',');
         try
         {
             Data[NextDataIndex % Data.Length] = double.Parse(parts[0]);
