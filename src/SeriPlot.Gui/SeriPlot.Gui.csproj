@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ScottPlot" Version="4.1.59" />
+    <PackageReference Include="ScottPlot.WinForms" Version="4.1.59" />
+    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SeriPlot.Core\SeriPlot.Core.csproj" />
   </ItemGroup>
 
